@@ -42,3 +42,5 @@ obs_*.log
 sync_result.json
 tail_tmp.log
 *_tmp*.log
+.vercel
+.env*
