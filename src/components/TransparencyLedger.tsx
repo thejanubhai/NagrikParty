@@ -515,7 +515,7 @@ export function TransparencyLedger() {
                 {donationConfig.qr_image_url && !qrImgBroken ? (
                   <img
                     src={donationConfig.qr_image_url}
-                    alt="UPI QR Code — scan to donate to Nagrik Party"
+                    alt="UPI QR Code, scan to donate to Nagrik Party"
                     style={{ width: "100%", height: "auto", borderRadius: "3px", border: "1px solid var(--line)", background: "#fff", padding: "6px" }}
                     onError={() => setQrImgBroken(true)}
                   />
@@ -535,6 +535,7 @@ export function TransparencyLedger() {
                 ) : null}
                 <small style={{ display: "block", fontSize: "11px", color: "var(--muted)", marginTop: "6px" }}>
                   Instant UPI Scan · {donationConfig.upi_id}
+                  <a href="/contribute" style={{ display: "inline-block", marginTop: "6px", fontSize: "11px", fontWeight: 700, color: "var(--saffron)" }}>Poster download karein (A4 / A5)</a>
                 </small>
               </div>
             ) : null}

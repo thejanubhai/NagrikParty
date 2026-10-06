@@ -7,7 +7,7 @@ interface ListenButtonProps {
   label?: string;
 }
 
-/** Hindi-first text-to-speech — "Suniye" for users who prefer listening. */
+/** Hindi-first text-to-speech: "Suniye" for users who prefer listening. */
 export function ListenButton({ text, lang = "hi-IN", label = "Suniye" }: ListenButtonProps) {
   const [speaking, setSpeaking] = useState(false);
 

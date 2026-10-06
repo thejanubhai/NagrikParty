@@ -4,7 +4,7 @@ import { createApiSupabase } from "@/lib/supabase";
 import { brevoSend, buildEmailCarrier } from "@/lib/email";
 import { resolveRuntimeEnv } from "@/lib/worker-env";
 
-// POST /api/v1/admin/email/send — admin-gated single-recipient transactional send.
+// POST /api/v1/admin/email/send: admin-gated single-recipient transactional send.
 // Body: { to, subject, html, text?, tag?, purpose? }
 // Every send is recorded in public.email_events for ledger-grade traceability
 // and in the statutory audit log. Donor PII stays server-side only.
@@ -34,7 +34,7 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
 
-    // Worker runtime env (secrets live here — dashboard "Add variable" or
+    // Worker runtime env (secrets live here, dashboard "Add variable" or
     // `wrangler secret put BREVO_API_KEY --name nagrikparty`).
     // Astro v6: locals.runtime.env removed → use cloudflare:workers env module.
     const runtimeEnv = await resolveRuntimeEnv();
@@ -50,7 +50,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     const scopedSupabase = createApiSupabase(ctx.token);
 
-    // Trace the send (recipient hashed — raw PII stays in Brevo, not our DB).
+    // Trace the send (recipient hashed: raw PII stays in Brevo, not our DB).
     if (scopedSupabase) {
       const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(to));
       const recipientHash = Array.from(new Uint8Array(digest))

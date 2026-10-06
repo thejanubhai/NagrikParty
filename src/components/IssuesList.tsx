@@ -44,7 +44,7 @@ export function IssuesList() {
       <EmptyState
         icon="⚠️"
         title="Issues load nahi ho paye"
-        message="Connection ki dikkat lag rahi hai. Dobara try karein — aapka data safe hai."
+        message="Connection ki dikkat lag rahi hai. Dobara try karein, aapka data safe hai."
         actionLabel="Dobara Try Karein"
         onAction={() => window.location.reload()}
       />
@@ -56,7 +56,7 @@ export function IssuesList() {
       <EmptyState
         icon="📮"
         title="Abhi koi issue report nahi hua"
-        message="Aapke area ki pehli civic problem aap report kar sakte hain — upar diya form use karein."
+        message="Aapke area ki pehli civic problem aap report kar sakte hain, upar diya form use karein."
       />
     );
   }

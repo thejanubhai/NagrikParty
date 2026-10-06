@@ -29,7 +29,7 @@ function countByDay(rows: Array<{ created_at: string }> | null | undefined, days
 
 // Aggregated Control Centre payload: live platform metrics, actionable
 // queues, 14-day intake trends, queue previews, staff composition,
-// integration health and the recent audit trail — one JWT-protected call.
+// integration health and the recent audit trail: one JWT-protected call.
 export const GET: APIRoute = async ({ request }) => {
   const authResult = await requireRole(request, ["VERIFIER", "ADMIN", "SUPER_ADMIN"]);
   if ("response" in authResult) return authResult.response;

@@ -285,7 +285,7 @@ export function ControlCentre() {
               <div style={{ width: `${loading ? 0 : (q.pending / maxQueue) * 100}%`, height: "100%", background: q.color, transition: "width 0.4s ease" }} />
             </div>
             <div style={{ fontSize: "11.5px", color: "var(--muted)", marginTop: "6px" }}>
-              {q.pending > 0 ? "Action required — open queue" : "Queue clear"}
+              {q.pending > 0 ? "Action required, open queue" : "Queue clear"}
             </div>
           </a>
         ))}
@@ -314,7 +314,7 @@ export function ControlCentre() {
         <div style={{ display: "grid", gap: "14px" }}>
           <div className="card" style={{ background: "var(--paper-card)", padding: "22px", borderRadius: "4px", border: "1px solid var(--line-strong)", boxShadow: "var(--shadow)" }}>
             <h3 style={{ fontSize: "16px", fontFamily: "var(--font-serif)", fontWeight: 700, margin: "0 0 4px", color: "var(--ink)", display: "flex", alignItems: "center", gap: "8px" }}>
-              <TrendingUp size={17} style={{ color: "var(--blue)" }} /> Intake Trends — Last 14 Days
+              <TrendingUp size={17} style={{ color: "var(--blue)" }} /> Intake Trends: Last 14 Days
             </h3>
             <div style={{ display: "grid", gap: "16px", marginTop: "14px" }}>
               {[
@@ -470,7 +470,7 @@ export function ControlCentre() {
                         {row.action}
                       </div>
                       <div style={{ fontSize: "10.5px", fontFamily: "var(--font-mono)", color: "var(--muted)", marginTop: "2px" }}>
-                        {row.entity_type ?? "—"} · {row.actor_role ?? "—"}
+                        {row.entity_type ?? "-"} · {row.actor_role ?? "-"}
                       </div>
                     </div>
                     <span style={{ fontSize: "10.5px", fontFamily: "var(--font-mono)", color: "var(--muted)", whiteSpace: "nowrap" }}>

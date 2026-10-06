@@ -9,7 +9,7 @@ interface EmptyStateProps {
   onAction?: () => void;
 }
 
-/** Friendly bilingual empty state — never show a blank list. */
+/** Friendly bilingual empty state. Never show a blank list. */
 export function EmptyState({ icon = "📭", title, message, actionLabel, actionHref, onAction }: EmptyStateProps) {
   return (
     <div className="empty-state">

@@ -40,7 +40,7 @@ if (supabase) {
       // Title guard: blank titles ko readable fallback do taaki feed me kabhi khaali card na dikhe
       recentCrimes = allCrimes.slice(0, 50).map((c: { id: string; title?: string | null; source_url: string; incident_date: string; crime_type: string }) => ({
         id: c.id,
-        title: c.title && c.title.trim().length > 0 ? c.title : `Verified ${c.crime_type} incident — Delhi NCR`,
+        title: c.title && c.title.trim().length > 0 ? c.title : `Verified ${c.crime_type} incident, Delhi NCR`,
         source_url: c.source_url,
         incident_date: c.incident_date,
         crime_type: c.crime_type,
@@ -66,7 +66,7 @@ const totalCitations = stats.reduce((acc, curr) => acc + curr.count, 0);
       </div>
       <h1>Verified Crime Tracker</h1>
       <p class="page-copy" style="max-width: 760px;">
-        Delhi NCR ki publicly documented crime jaankari — har incident verified aur seedha news source se juda hua. Koi andaza nahi, sirf saboot.
+        Delhi NCR ki publicly documented crime jaankari. Har incident verified aur seedha news source se juda hua. Koi andaza nahi, sirf saboot.
       </p>
 
       <div style="display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; align-items: center;">

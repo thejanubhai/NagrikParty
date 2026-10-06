@@ -24,7 +24,7 @@ const { data: rawIncidents } = supabase
 // Title guard: blank title kabhi render mat karo
 const incidents = (rawIncidents ?? []).map((c: { id: string; title?: string | null; source_url: string; incident_date: string; crime_type: string }) => ({
   id: c.id,
-  title: c.title && c.title.trim().length > 0 ? c.title : `Verified ${c.crime_type} incident — Delhi NCR`,
+  title: c.title && c.title.trim().length > 0 ? c.title : `Verified ${c.crime_type} incident, Delhi NCR`,
   source_url: c.source_url,
   incident_date: c.incident_date,
   crime_type: c.crime_type,

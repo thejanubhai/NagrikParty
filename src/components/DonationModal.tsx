@@ -267,7 +267,7 @@ export function DonationModal({ isOpen, onClose }: DonationModalProps) {
           </a>
         </div>
 
-        {/* Direct Bank Account Details (IMPS / NEFT) — only when admin has saved verified details */}
+        {/* Direct Bank Account Details (IMPS / NEFT), only when admin has saved verified details */}
         {hasBankDetails && (
         <div
           style={{

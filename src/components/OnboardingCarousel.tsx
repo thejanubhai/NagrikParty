@@ -4,12 +4,12 @@ const SLIDES = [
   {
     icon: "🏛️",
     title: "Nagrik Party kya hai?",
-    body: "Delhi ke liye ban rahi ek nayi political party — Formation Phase me hai. Kaam pehle, power baad me. Sab kuch khula aur verified.",
+    body: "Delhi ke liye ban rahi ek nayi political party, Formation Phase me hai. Kaam pehle, power baad me. Sab kuch khula aur verified.",
   },
   {
     icon: "🪪",
     title: "Member kaise banein?",
-    body: "Bas 5 minute — apna Voter ID rakhein, form bharein, aur digital membership card paayein. Koi fees nahi, koi cash nahi.",
+    body: "Bas 5 minute: apna Voter ID rakhein, form bharein, aur digital membership card paayein. Koi fees nahi, koi cash nahi.",
   },
   {
     icon: "👀",
@@ -18,7 +18,7 @@ const SLIDES = [
   },
 ];
 
-/** First-visit 3-slide intro — skippable, never shows again. */
+/** First-visit 3-slide intro, skippable, never shows again. */
 export function OnboardingCarousel() {
   const [show, setShow] = useState(false);
   const [index, setIndex] = useState(0);

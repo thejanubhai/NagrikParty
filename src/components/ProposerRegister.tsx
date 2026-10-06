@@ -130,7 +130,7 @@ export function ProposerRegister() {
         <div>
           <h2 style={{ fontSize: "20px", fontFamily: "var(--font-serif)", fontWeight: 700, margin: "0 0 4px", color: "var(--ink)", display: "flex", alignItems: "center", gap: "9px" }}>
             <Award size={20} style={{ color: "var(--blue)" }} />
-            Proposer Register — Section 29A
+            Proposer Register: Section 29A
           </h2>
           <p style={{ fontSize: "13.5px", color: "var(--muted)", margin: 0 }}>
             Every approved founding member is an ECI proposer. Move records from draft → notarized → verified before filing.
@@ -271,11 +271,11 @@ export function ProposerRegister() {
                 <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Serial</div><div style={{ fontFamily: "var(--font-mono)", color: "var(--ink)", fontWeight: 700 }}>{selected.proposer_serial_number}</div></div>
                 <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>EPIC</div><div style={{ fontFamily: "var(--font-mono)", color: "var(--ink)" }}>{selected.epic_number}</div></div>
                 <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Vidhan Sabha</div><div style={{ color: "var(--ink)" }}>{selected.vidhan_sabha}</div></div>
-                <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Ward</div><div style={{ color: "var(--ink)" }}>{selected.ward || "—"}</div></div>
-                <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Part / Sl. No.</div><div style={{ fontFamily: "var(--font-mono)", color: "var(--ink)" }}>{selected.part_number || "—"} / {selected.serial_number || "—"}</div></div>
-                <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Polling Station</div><div style={{ color: "var(--ink)" }}>{selected.polling_station || "—"}</div></div>
-                <div style={{ gridColumn: "1 / -1" }}><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Address</div><div style={{ color: "var(--ink)" }}>{selected.address || "—"}</div></div>
-                <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Contact</div><div style={{ color: "var(--ink)" }}>{selected.contact_number || "—"}</div></div>
+                <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Ward</div><div style={{ color: "var(--ink)" }}>{selected.ward || "-"}</div></div>
+                <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Part / Sl. No.</div><div style={{ fontFamily: "var(--font-mono)", color: "var(--ink)" }}>{selected.part_number || "-"} / {selected.serial_number || "-"}</div></div>
+                <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Polling Station</div><div style={{ color: "var(--ink)" }}>{selected.polling_station || "-"}</div></div>
+                <div style={{ gridColumn: "1 / -1" }}><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Address</div><div style={{ color: "var(--ink)" }}>{selected.address || "-"}</div></div>
+                <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Contact</div><div style={{ color: "var(--ink)" }}>{selected.contact_number || "-"}</div></div>
                 <div><div style={{ fontSize: "10px", color: "var(--muted)", textTransform: "uppercase", fontWeight: 700, fontFamily: "var(--font-mono)" }}>Affidavit SHA-256</div><div style={{ fontFamily: "var(--font-mono)", color: "var(--ink)", fontSize: "11px", wordBreak: "break-all" }}>{selected.affidavit_sha256 || "Not uploaded"}</div></div>
               </div>
               {selected.rejection_reason && (

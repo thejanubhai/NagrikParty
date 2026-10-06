@@ -125,7 +125,7 @@ export function SourceReaderModal({ isOpen, onClose, title, sourceUrl, crimeType
           </button>
         </div>
 
-        {/* In-app browser — user never leaves nagrik.party */}
+        {/* In-app browser, user never leaves nagrik.party */}
         <iframe
           src={sourceUrl}
           title={title || "Verified news source"}

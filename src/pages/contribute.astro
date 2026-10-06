@@ -1,0 +1,146 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { ContributionPosterBoard } from "@/components/ContributionPoster";
+---
+
+<BaseLayout
+  title="Yogdaan aur Support | Nagrik Party"
+  description="Nagrik Party ke Formation Phase operations me yogdaan dein. UPI ya bank transfer se. Har rupaya public ledger me, koi cash nahi."
+>
+  <style is:global>
+    /* Print: sirf poster chhape, A4/A5 me, bina kisi extra button ke (Rule 23) */
+    @media print {
+      .nav-wrapper,
+      .bottom-nav,
+      .help-fab,
+      .install-banner,
+      footer,
+      .page-hero,
+      .no-print,
+      .contribute-section,
+      .contribute-cta {
+        display: none !important;
+      }
+      body,
+      .site-shell,
+      main {
+        background: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .poster-shell {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .poster-frame {
+        width: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+      .poster-scaler {
+        transform: none !important;
+        width: auto !important;
+        height: auto !important;
+      }
+      .contribution-poster {
+        box-shadow: none !important;
+      }
+    }
+  </style>
+
+  <section class="page-hero">
+    <div class="container" style="max-width: 960px;">
+      <div class="mini-label" style="background: rgba(179, 74, 21, 0.08); color: var(--saffron);">
+        PHASE 1 · FORMATION PHASE
+      </div>
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.1rem); margin: 10px 0 14px; font-family: var(--font-serif); line-height: 1.15;">
+        Yogdaan dijiye, party banane me
+      </h1>
+      <p style="font-size: clamp(15px, 1.8vw, 18px); color: var(--ink-body); line-height: 1.6; margin: 0; max-width: 700px;">
+        Party banane ka kharcha bada hota hai: forms, printing, chhote office ka kharcha, digital system aur volunteer ka safar.
+        Yeh kharcha bade businessmen se nahi, aap jaise nagrik ke chhote yogdaan se uthana hai.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 28px; padding-bottom: 20px;">
+    <div class="container" style="max-width: 960px;">
+      <div
+        class="card"
+        style="background: var(--paper-card); border: 1px solid var(--line-strong); border-left: 3px solid var(--saffron); border-radius: 4px; padding: 18px 22px; margin-bottom: 22px; box-shadow: var(--shadow);"
+      >
+        <span class="mini-label" style="background: rgba(179, 74, 21, 0.08); color: var(--saffron); font-size: 11px;">
+          ZAROORI BAAT · PEHLE PADHEIN
+        </span>
+        <h3 style="font-size: 16px; font-weight: 700; margin: 8px 0 6px; font-family: var(--font-serif); color: var(--ink);">
+          Registration se pehle yogdaan par tax chhoot nahi milti
+        </h3>
+        <p style="font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.6;">
+          Nagrik Party abhi ECI registration ki taraf badh rahi hai. Registered party banne se pehle diya gaya yogdaan
+          Income Tax Act ke section 80GGB ya 80GGC ke tahat claim nahi ho sakta. Hum yeh baat chhupate nahi. Yogdaan poora
+          voluntary hai, aur jo bhi yogdaan aata hai wo public ledger me naam ke saath likha jaata hai.
+        </p>
+      </div>
+
+      <ContributionPosterBoard client:only="react" />
+    </div>
+  </section>
+
+  <section class="section contribute-section" style="padding-top: 20px; padding-bottom: 50px;">
+    <div class="container" style="max-width: 960px;">
+      <h2 style="font-size: 22px; font-family: var(--font-serif); margin: 0 0 14px; color: var(--ink);">
+        Paisa kahan jaata hai
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px;">
+        <div class="card" style="padding: 18px 20px; background: var(--paper-card); border: 1px solid var(--line); border-radius: 4px;">
+          <strong style="display: block; margin-bottom: 5px; color: var(--ink);">Ground ka kaam</strong>
+          <span style="font-size: 13.5px; color: var(--muted); line-height: 1.55;">
+            Ward level par member milna, ghar ghar jaana, chhote nukkad meetup, banner aur pamphlet.
+          </span>
+        </div>
+        <div class="card" style="padding: 18px 20px; background: var(--paper-card); border: 1px solid var(--line); border-radius: 4px;">
+          <strong style="display: block; margin-bottom: 5px; color: var(--ink);">Digital system</strong>
+          <span style="font-size: 13.5px; color: var(--muted); line-height: 1.55;">
+            Membership register, complaint aur RTI system, aur public ledger chalaane ka server kharcha.
+          </span>
+        </div>
+        <div class="card" style="padding: 18px 20px; background: var(--paper-card); border: 1px solid var(--line); border-radius: 4px;">
+          <strong style="display: block; margin-bottom: 5px; color: var(--ink);">Legal aur paperwork</strong>
+          <span style="font-size: 13.5px; color: var(--muted); line-height: 1.55;">
+            Constitution drafting, CA aur lawyer fees, aur ECI registration ki file taiyaari.
+          </span>
+        </div>
+      </div>
+
+      <h2 style="font-size: 22px; font-family: var(--font-serif); margin: 34px 0 12px; color: var(--ink);">
+        Hum kya nahi karte
+      </h2>
+      <ul style="margin: 0; padding-left: 20px; font-size: 14.5px; color: var(--ink-body); line-height: 1.8;">
+        <li>Cash yogdaan nahi lete. Sirf UPI ya bank transfer.</li>
+        <li>Bade businessman ya company se badi funding nahi lete.</li>
+        <li>Yogdaan ke badle koi pad ya ticket ka vaada nahi karte.</li>
+        <li>Kisi ko tax chhoot ka jhootha vaada nahi karte.</li>
+      </ul>
+
+      <div
+        class="contribute-cta"
+        style="margin-top: 30px; padding: 20px 22px; background: var(--paper-subtle); border: 1px solid var(--line); border-radius: 4px;"
+      >
+        <strong style="display: block; margin-bottom: 6px; color: var(--ink);">Yogdaan se membership nahi milti</strong>
+        <p style="margin: 0 0 12px; font-size: 13.5px; color: var(--muted); line-height: 1.6;">
+          Membership free hai, aur har member ko ek hi vote milta hai, chahe yogdaan kuch bhi ho. Pehle member baniye,
+          phir chahein toh yogdaan dijiye.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a class="button" href="/membership" style="padding: 10px 18px; font-weight: 700;">Member Baniye</a>
+          <a class="button" href="/transparency" style="padding: 10px 18px; font-weight: 700;">Poora Hisaab Dekhein</a>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px; font-size: 12.5px; color: var(--ink-faint); line-height: 1.6;">
+        Note: 20,000 rupaye se zyada ka yogdaan dene par hum aapka naam, PAN aur address record karte hain, kyunki election
+        rules me reporting zaroori hai. Chhote yogdaan ke liye sirf naam aur mobile number rakha jaata hai.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

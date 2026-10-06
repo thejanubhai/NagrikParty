@@ -243,7 +243,7 @@ export function InductionWizard() {
       });
 
       if (res.ok && !silent) {
-        setDraftSavedMsg("✓ Aapka jawab save ho gaya — kabhi bhi wapas aa sakte hain.");
+        setDraftSavedMsg("✓ Aapka jawab save ho gaya. Kabhi bhi wapas aa sakte hain.");
         setTimeout(() => setDraftSavedMsg(""), 3500);
       }
     } catch {
@@ -525,7 +525,7 @@ export function InductionWizard() {
               padding: 0,
             }}
           >
-            {savingDraft ? "Save ho raha hai..." : "Draft save karein — baad me poora karein"}
+            {savingDraft ? "Save ho raha hai..." : "Draft save karein, baad me poora karein"}
           </button>
         </div>
 

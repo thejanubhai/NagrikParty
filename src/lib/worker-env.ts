@@ -1,5 +1,5 @@
 // Worker runtime env resolution for Astro v6 on Cloudflare.
-// Astro v6 removed `Astro.locals.runtime.env` — the supported path is the
+// Astro v6 removed `Astro.locals.runtime.env`. The supported path is the
 // `cloudflare:workers` module (dynamic import so local node dev doesn't break).
 let cachedEnv: Record<string, string | undefined> | null = null;
 

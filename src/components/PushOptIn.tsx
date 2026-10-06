@@ -4,7 +4,9 @@ import { supabase } from "@/lib/supabase";
 
 const VAPID_PUBLIC_KEY = import.meta.env.PUBLIC_VAPID_PUBLIC_KEY as string | undefined;
 
-function urlBase64ToUint8Array(base64String: string): Uint8Array {
+// Typed as Uint8Array<ArrayBuffer> (not ArrayBufferLike) so it satisfies the
+// PushSubscriptionOptions applicationServerKey: BufferSource requirement.
+function urlBase64ToUint8Array(base64String: string): Uint8Array<ArrayBuffer> {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
   const rawData = atob(base64);
@@ -81,7 +83,7 @@ export function PushOptIn() {
         setSubscribed(true);
       }
     } catch {
-      // Permission denied or network error — stay quiet
+      // Permission denied or network error, stay quiet
     } finally {
       setBusy(false);
     }

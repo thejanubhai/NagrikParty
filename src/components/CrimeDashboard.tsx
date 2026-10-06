@@ -92,7 +92,7 @@ export function CrimeDashboard() {
         <div className="crime-feed-actions" style={{ marginTop: 12 }}>
           <ListenButton text={summaryText} label="Poora Suniye" />
           <ShareButton
-            title="Nagrik Party — Delhi Verified Crime Tracker"
+            title="Nagrik Party: Delhi Verified Crime Tracker"
             text={summaryText}
             url="/crime"
             label="WhatsApp par Bhejein"

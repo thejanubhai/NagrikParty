@@ -13,7 +13,7 @@ export const POST: APIRoute = async ({ request }) => {
     const body = await request.json();
     action = body?.action || "unknown";
   } catch {
-    // empty/invalid body — still ack
+    // empty/invalid body, still ack
   }
   return new Response(
     JSON.stringify({ ok: true, resource, action }),

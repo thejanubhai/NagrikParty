@@ -14,7 +14,7 @@
   src: url('/fonts/Inter-Bold.woff2') format('woff2');
 }
 
-/* Self-hosted Mukta — Devanagari + Latin (no Google Fonts blocking) */
+/* Self-hosted Mukta: Devanagari + Latin (no Google Fonts blocking) */
 @font-face {
   font-family: 'Mukta';
   font-style: normal;
@@ -102,7 +102,7 @@
 
 :root {
   /* ==========================================================================
-     NAYA DILLI — NATIVE CIVIC APP PALETTE (Clean, Solid, High-Contrast)
+     NAYA DILLI: NATIVE CIVIC APP PALETTE (Clean, Solid, High-Contrast)
      No paper texture, no glassmorphism, no AI-template gradients.
      ========================================================================== */
   --paper: #ffffff;            /* Clean app background */
@@ -111,7 +111,7 @@
   --paper-hover: #f1f5f9;      /* Hover tone */
   --white: #ffffff;
 
-  /* Ink — High contrast for low-quality screens & sunlight readability */
+  /* Ink: High contrast for low-quality screens & sunlight readability */
   --ink: #0f172a;              /* Near-black, softer than pure black */
   --ink-body: #1e293b;         /* Body text */
   --muted: #475569;            /* Captions / metadata (4.5:1 on white) */
@@ -122,7 +122,7 @@
   --line-strong: rgba(15, 23, 42, 0.20);
   --line-dashed: rgba(15, 23, 42, 0.16);
 
-  /* Tiranga Civic Colors — vibrant, culturally resonant */
+  /* Tiranga Civic Colors: vibrant, culturally resonant */
   --saffron: #e8571a;          /* Tiranga saffron (accessible on white) */
   --green: #046a38;            /* Tiranga green */
   --red: #dc2626;              /* Alert red */
@@ -130,12 +130,12 @@
   --gold: #b45309;             /* Seal amber */
   --soft: #ffffff;
 
-  /* Native Surfaces — flat, subtle, no floating islands */
+  /* Native Surfaces: flat, subtle, no floating islands */
   --shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
   --shadow-elevated: 0 1px 3px rgba(15, 23, 42, 0.08), 0 6px 16px rgba(15, 23, 42, 0.06);
   --island-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.08);
 
-  /* Typography Systems — Sans-first for app readability */
+  /* Typography Systems: Sans-first for app readability */
   --font-serif: 'Inter', 'Mukta', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-sans: 'Inter', 'Mukta', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'Courier Prime', 'JetBrains Mono', SFMono-Regular, Menlo, monospace;
@@ -149,7 +149,7 @@
 }
 
 /* ==========================================================================
-   DARK MODE — Same solid approach, no glow, no glass.
+   DARK MODE: Same solid approach, no glow, no glass.
    ========================================================================== */
 :root[data-theme="dark"] {
   --paper: #0b1120;
@@ -202,7 +202,7 @@
 }
 
 /* ==========================================================================
-   NATIVE UI PRIMITIVES — shared across components
+   NATIVE UI PRIMITIVES: shared across components
    ========================================================================== */
 .skip-link {
   position: fixed;
@@ -252,7 +252,7 @@ button, a, input, select, textarea {
   touch-action: manipulation;
 }
 
-/* Paper texture overlay removed — native app uses clean solid surfaces. */
+/* Paper texture overlay removed. Native app uses clean solid surfaces. */
 
 body.nav-open {
   overflow: hidden;
@@ -2210,7 +2210,7 @@ body.auth-page {
 
 
 /* ==========================================================================
-   BOTTOM TAB BAR — Native app navigation (mobile only, < 920px)
+   BOTTOM TAB BAR: Native app navigation (mobile only, < 920px)
    ========================================================================== */
 .bottom-nav {
   display: none;

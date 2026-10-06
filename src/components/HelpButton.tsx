@@ -1,7 +1,7 @@
 import React from "react";
 import { LifeBuoy, X } from "lucide-react";
 
-/** Floating help lifeline — FAQ + WhatsApp support, visible on every page. */
+/** Floating help lifeline: FAQ + WhatsApp support, visible on every page. */
 export function HelpButton() {
   const [open, setOpen] = React.useState(false);
 

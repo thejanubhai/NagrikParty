@@ -1,5 +1,5 @@
 /* ==========================================================================
-   NATIVE UI PRIMITIVES — shared across components (no AI-template patterns)
+   NATIVE UI PRIMITIVES: shared across components (no AI-template patterns)
    ========================================================================== */
 
 /* WhatsApp / share button */
@@ -65,7 +65,7 @@
   margin: 0 auto 20px;
 }
 
-/* Solid skeleton blocks (no shimmer — AI-template look avoid) */
+/* Solid skeleton blocks (no shimmer, AI-template look avoid) */
 .skeleton-wrap { display: grid; gap: 12px; }
 .skeleton-block {
   border-radius: 8px;
@@ -337,7 +337,7 @@
   color: #ffffff;
 }
 
-/* Snappy page transitions � native app feel (100ms, no slow fade) */
+/* Snappy page transitions � native app feel (100ms, no slow fade) */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 100ms;

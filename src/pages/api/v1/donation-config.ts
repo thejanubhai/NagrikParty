@@ -7,16 +7,16 @@ export const GET: APIRoute = async () => {
       return new Response(
         JSON.stringify({
           is_enabled: true,
-          legal_status_label: "ECI-verified Current Account — interim party account till registration",
+          legal_status_label: "ECI-verified Current Account: interim party account till registration",
           upi_id: "areynetaji@ybl",
           account_name: "SHEIKH ARSALAN ULLAH CHISHTI",
           bank_name: "Axis Bank",
           account_number: "924020035537387",
           ifsc_code: "UTIB0002912",
-          account_type: "Current Account — Election & Donation Account (MLA 2025, ECI affidavit verified; interim party account till registration)",
+          account_type: "Current Account: Election & Donation Account (MLA 2025, ECI affidavit verified; interim party account till registration)",
           qr_image_url: "/images/qrnagrikparty.jpeg",
           payment_instructions: "Scan the UPI QR (areynetaji@ybl) or transfer via IMPS/NEFT to the account beside the QR. Retain UTR for receipt.",
-          disclosure_text: "Account holder SHEIKH ARSALAN ULLAH CHISHTI — ECI affidavit-verified Current Account opened during MLA 2025 election. Sole interim party account till registration. Statements released publicly every 6 months. 100% digital, zero cash.",
+          disclosure_text: "Account holder SHEIKH ARSALAN ULLAH CHISHTI: ECI affidavit-verified Current Account opened during MLA 2025 election. Sole interim party account till registration. Statements released publicly every 6 months. 100% digital, zero cash.",
         }),
         {
           status: 200,
@@ -35,16 +35,16 @@ export const GET: APIRoute = async () => {
       return new Response(
         JSON.stringify({
           is_enabled: true,
-          legal_status_label: "ECI-verified Current Account — interim party account till registration",
+          legal_status_label: "ECI-verified Current Account: interim party account till registration",
           upi_id: "areynetaji@ybl",
           account_name: "SHEIKH ARSALAN ULLAH CHISHTI",
           bank_name: "Axis Bank",
           account_number: "924020035537387",
           ifsc_code: "UTIB0002912",
-          account_type: "Current Account — Election & Donation Account (MLA 2025, ECI affidavit verified; interim party account till registration)",
+          account_type: "Current Account: Election & Donation Account (MLA 2025, ECI affidavit verified; interim party account till registration)",
           qr_image_url: "/images/qrnagrikparty.jpeg",
           payment_instructions: "Scan the UPI QR (areynetaji@ybl) or transfer via IMPS/NEFT to the account beside the QR. Retain UTR for receipt.",
-          disclosure_text: "Account holder SHEIKH ARSALAN ULLAH CHISHTI — ECI affidavit-verified Current Account opened during MLA 2025 election. Sole interim party account till registration. Statements released publicly every 6 months. 100% digital, zero cash.",
+          disclosure_text: "Account holder SHEIKH ARSALAN ULLAH CHISHTI: ECI affidavit-verified Current Account opened during MLA 2025 election. Sole interim party account till registration. Statements released publicly every 6 months. 100% digital, zero cash.",
         }),
         {
           status: 200,
@@ -53,7 +53,7 @@ export const GET: APIRoute = async () => {
       );
     }
 
-    // Live fallback: never return a stale/empty UPI or QR — the verified
+    // Live fallback: never return a stale/empty UPI or QR. The verified
     // ECI Political Current Account UPI + app-bundled QR are the source of truth.
     if (!data.upi_id) data.upi_id = "areynetaji@ybl";
     if (!data.qr_image_url) data.qr_image_url = "/images/qrnagrikparty.jpeg";

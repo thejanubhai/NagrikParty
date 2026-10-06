@@ -37,6 +37,7 @@ export const footerSections: NavSection[] = [
     title: "Join",
     items: [
       { label: "Become a Member", href: "/membership" },
+      { label: "Yogdaan Karein", href: "/contribute" },
       { label: "Become a Volunteer", href: "/volunteer" },
       { label: "Build With Us", href: "/build-with-us" },
       { label: "Member Dashboard", href: "/member" },
@@ -81,6 +82,7 @@ export const sitemapStructure: NavSection[] = [
     title: "Join",
     items: [
       { label: "Become a Member", href: "/membership", description: "Formal founding membership induction under Section 29A RPA 1951" },
+      { label: "Yogdaan (Contribute)", href: "/contribute", description: "Formation Phase yogdaan, printable A4/A5 poster aur UPI QR" },
       { label: "Become a Volunteer", href: "/volunteer", description: "Contribute time, ground organizing, or skills" },
       { label: "Build With Us", href: "/build-with-us", description: "Skill-based participation tasks" },
     ],

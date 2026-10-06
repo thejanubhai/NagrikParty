@@ -36,7 +36,7 @@ function tagValue(block: string, tag: string): string {
   return match ? decodeEntities(match[1]) : "";
 }
 
-// Dependency-free RSS/Atom parsing — avoids CJS parser libs that break on Workers.
+// Dependency-free RSS/Atom parsing: avoids CJS parser libs that break on Workers.
 function parseFeedItems(xml: string): FeedItem[] {
   const items: FeedItem[] = [];
   const blocks = xml.match(/<item[\s\S]*?<\/item>|<entry[\s\S]*?<\/entry>/gi) || [];
@@ -119,7 +119,7 @@ export const POST: APIRoute = async ({ request }) => {
         for (const item of parseFeedItems(xml)) {
           const sourceUrl = item.link.trim();
           // Title fallback chain: kabhi blank save mat karo
-          const title = item.title.trim() || `Verified ${crime_type} incident — Delhi NCR`;
+          const title = item.title.trim() || `Verified ${crime_type} incident, Delhi NCR`;
           const parsed = item.pubDate ? new Date(item.pubDate) : new Date();
           if (!sourceUrl) {
             skipped++;
@@ -154,7 +154,7 @@ export const POST: APIRoute = async ({ request }) => {
       continue;
     }
     // Title fallback chain: kabhi blank save mat karo
-    const title = (item.title || "").trim() || `Verified ${item.crime_type} incident — Delhi NCR`;
+    const title = (item.title || "").trim() || `Verified ${item.crime_type} incident, Delhi NCR`;
     const parsed = item.incident_date ? new Date(item.incident_date) : new Date();
     const { error } = await supabase.from("crimes").upsert(
       {

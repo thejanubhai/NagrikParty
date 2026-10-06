@@ -3,7 +3,7 @@
  *
  * Astro's Sentry SDK automatically captures *unhandled* SSR/client errors.
  * This helper exists for the other case: errors we catch and handle
- * gracefully (fallbacks, retries, "ignore and continue" paths) — those would
+ * gracefully (fallbacks, retries, "ignore and continue" paths), those would
  * otherwise silently disappear into console.error and never reach Sentry.
  *
  * Safe to call from server routes, React islands, and plain modules:
@@ -20,7 +20,7 @@ let sentryPromise: Promise<SentryLike | null> | null = null;
  * Load the right Sentry build for the current runtime.
  * - Browser  → @sentry/astro (browser SDK, initialized by sentry.client.config.js)
  * - Worker   → @sentry/cloudflare (Node SDK must never be bundled into the
- *              Cloudflare Worker — it pulls Node builtins and crashes prerender)
+ *              Cloudflare Worker: it pulls Node builtins and crashes prerender)
  *
  * `import.meta.env.SSR` is a compile-time constant, so each bundle only keeps
  * its own branch.

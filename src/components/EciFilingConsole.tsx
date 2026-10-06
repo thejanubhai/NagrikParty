@@ -304,7 +304,7 @@ export function EciFilingConsole() {
           }}
         >
           <h3 style={{ fontSize: "16px", fontFamily: "var(--font-serif)", fontWeight: 700, margin: "0 0 12px", color: "var(--ink)" }}>
-            Statutory Readiness — {readiness.eci_ready ? "ECI READY" : "PENDING"}
+            Statutory Readiness: {readiness.eci_ready ? "ECI READY" : "PENDING"}
           </h3>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "10px", fontSize: "12.5px" }}>
             {[

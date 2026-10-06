@@ -1,4 +1,4 @@
-// Nagrik Party — Brevo (nagrik.party domain) transactional email helper.
+// Nagrik Party: Brevo (nagrik.party domain) transactional email helper.
 // No SDK: direct Brevo SMTP API v3 `sendMail` via fetch. Runs on Cloudflare Workers.
 // Sender domain must be verified in Brevo + DKIM/SPF records present in Cloudflare DNS.
 // Secrets on the Worker: BREVO_API_KEY (secret/plain var), BREVO_FROM_EMAIL/NAME (vars).
@@ -23,7 +23,7 @@ interface BrevoKeyResult {
 
 // Cloudflare Workers env access: Astro v6 removed `Astro.locals.runtime.env`.
 // Secrets/bindings are resolved via the `cloudflare:workers` env module
-// (see src/lib/worker-env.ts) — never from client-supplied headers.
+// (see src/lib/worker-env.ts), never from client-supplied headers.
 export interface EmailCarrier {
   apiKey: string;
   fromEmail: string;

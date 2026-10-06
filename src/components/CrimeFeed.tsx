@@ -44,7 +44,7 @@ export function CrimeFeed({ items }: { items: CrimeFeedItem[] }) {
           const displayTitle =
             c.title && c.title.trim().length > 0
               ? c.title
-              : `Verified ${c.crime_type} incident — ${domainOf(c.source_url)} · ${dateStrOf(c.incident_date)}`;
+              : `Verified ${c.crime_type} incident, ${domainOf(c.source_url)} · ${dateStrOf(c.incident_date)}`;
           const domain = domainOf(c.source_url);
           const dateStr = dateStrOf(c.incident_date);
 

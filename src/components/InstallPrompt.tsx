@@ -6,13 +6,13 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
-/** Custom Add-to-Home-Screen banner — shows on 2nd visit, dismissible for 7 days. */
+/** Custom Add-to-Home-Screen banner: shows on 2nd visit, dismissible for 7 days. */
 export function InstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Already installed — never show
+    // Already installed, never show
     if (window.matchMedia("(display-mode: standalone)").matches) return;
 
     const dismissedAt = Number(localStorage.getItem("nagrik-a2hs-dismissed") || 0);
@@ -52,7 +52,7 @@ export function InstallPrompt() {
         <span className="install-banner-icon">📲</span>
         <div>
           <strong>App install karein</strong>
-          <span>Play Store ki zaroorat nahi — seedha home screen par</span>
+          <span>Play Store ki zaroorat nahi, seedha home screen par</span>
         </div>
       </div>
       <div className="install-banner-actions">

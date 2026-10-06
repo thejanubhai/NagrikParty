@@ -90,7 +90,7 @@ export function AdminFinanceHub() {
     bank_name: "Axis Bank",
     account_number: "924020035537387",
     ifsc_code: "UTIB0002912",
-    account_type: "Current Account — Election & Donation Account (MLA 2025, ECI affidavit verified; interim party account till registration)",
+    account_type: "Current Account: Election & Donation Account (MLA 2025, ECI affidavit verified; interim party account till registration)",
     qr_image_url: "/images/qrnagrikparty.jpeg",
     payment_instructions: "Scan the UPI QR code or transfer directly to the formation account. Retain reference UTR for audit receipting.",
     disclosure_text: "Nagrik Party operates on a strictly digital, zero-cash basis. Every receipt is auditable under RPA 1951.",
