@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X, User, LogOut, ChevronRight, Shield, QrCode } from "lucide-react";
 import { supabase } from "@/lib/supabase";
-import type { User as SupabaseUser } from "@supabase/supabase-js";
+import type { User as SupabaseUser } from '@/lib/supabase';
 import { publicNavLinks, memberNavLinks } from "@/lib/navigation";
 import { DonationModal } from "@/components/DonationModal";
 import { ThemeToggle } from "@/components/ThemeToggle";
